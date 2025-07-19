@@ -29,7 +29,33 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+<!-- Ek Styles CSS Navbardaki logo için -->
+<style>
+/* Navbar logosu için özel stil */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;         /* Dilersen boyutunu ayarla */
+    width: 200px;
+    padding: 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s;
+}
+.logo img {
+    height: 48px;        /* Logo resminin yüksekliği */
+    width: auto;
+    display: block;
+}
+.logo:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    background: #f4f4f4;
+}
+</style>
 
+<!-- Ek Styles CSS Navbardaki logo için Son -->
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid py-2 border-bottom d-none d-lg-block">
