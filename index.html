@@ -53,21 +53,26 @@
     box-shadow: 0 4px 16px rgba(0,0,0,0.15);
     background: #f4f4f4;
 }
-    .service-icon img,
-.service-img {
-    width: 64px !important;
-    height: 64px !important;
-    object-fit: cover !important;
-    border-radius: 50% !important;
-    display: block;
-    margin: 0 auto;
-    background: #0063b3;
-    padding: 8px;
-    box-shadow: none !important;
-    transform: none !important;  /* Varsa tüm dönüklükleri kaldırır */
-}
+    .service-item-custom {
+        min-height: 410px;
+        justify-content: flex-start;
+    }
+    .service-img-top {
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        margin-bottom: 24px;
+        background: #f5f5f5;
+        border: 3px solid #13C5DD;
+    }
+    @media (max-width: 767px) {
+        .service-item-custom { min-height: unset; }
+        .service-img-top { width: 70px; height: 70px; }
+    }
+    </style>
 
-</style>
 
 <!-- Ek Styles CSS Navbardaki logo için Son -->
     
@@ -199,49 +204,41 @@
         </div>
         <div class="row g-5">
             <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                    <div class="service-icon mb-4">
-                        <img src="img/cene-cerrahisi.jpg" alt="Çene Cerrahisi" class="service-img">
-                    </div>
+                <div class="service-item-custom bg-light rounded d-flex flex-column align-items-center text-center p-4 h-100">
+                    <img src="img/cene-cerrahisi.jpg" alt="Çene Cerrahisi" class="service-img-top mb-4">
                     <h4 class="mb-3">Çene Cerrahisi</h4>
                     <p class="m-0">Çene cerrahisinde; çene kırıkları, gömülü dişler, implant, tümör, kist, eklem hastalıkları, kemik artırımı, apikal rezeksiyon ve protez öncesi cerrahi tedavileri sunulmaktadır.</p>
-                    <a class="btn btn-lg btn-primary rounded-pill" href="">
+                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                    <div class="service-icon mb-4">
-                        <img src="img/blog3.jpg" alt="Lazer Tedavisi" class="service-img">
-                    </div>
+                <div class="service-item-custom bg-light rounded d-flex flex-column align-items-center text-center p-4 h-100">
+                    <img src="img/blog3.jpg" alt="Lazer Tedavisi" class="service-img-top mb-4">
                     <h4 class="mb-3">Lazer Tedavisi</h4>
                     <p class="m-0">Lazer tedavisiyle ağrı, ödem ve iltihap azalır, doku yenilenmesi, sinir iyileşmesi hızlanır. Güvenli, etkili ve yan etkisiz tedavi sunulur.</p>
-                    <a class="btn btn-lg btn-primary rounded-pill" href="">
+                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                    <div class="service-icon mb-4">
-                        <img src="img/dental-tomografi.jpg" alt="Dental Tomografi" class="service-img">
-                    </div>
+                <div class="service-item-custom bg-light rounded d-flex flex-column align-items-center text-center p-4 h-100">
+                    <img src="img/dental-tomografi.jpg" alt="Dental Tomografi" class="service-img-top mb-4">
                     <h4 class="mb-3">Dental Tomografi</h4>
                     <p class="m-0">Dental tomografi, üç boyutlu görüntüleme ile implant planlama, gömülü dişler, kemik kalitesi, kanal tedavisi ve çene eklemi analizlerinde güvenli, detaylı teşhis sağlar.</p>
-                    <a class="btn btn-lg btn-primary rounded-pill" href="">
+                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                    <div class="service-icon mb-4">
-                        <img src="img/implantoloji.jpg" alt="İmplantoloji" class="service-img">
-                    </div>
+                <div class="service-item-custom bg-light rounded d-flex flex-column align-items-center text-center p-4 h-100">
+                    <img src="img/implantoloji.jpg" alt="İmplantoloji" class="service-img-top mb-4">
                     <h4 class="mb-3">İmplantoloji</h4>
                     <p class="m-0">Eksik dişlerin yerine, doğal diş fonksiyonu ve estetiği sağlayan, güvenli ve dayanıklı implant uygulamaları ile sağlıklı gülüşler elde edilir.</p>
-                    <a class="btn btn-lg btn-primary rounded-pill" href="">
+                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
