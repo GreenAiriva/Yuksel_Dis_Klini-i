@@ -71,6 +71,13 @@
         .service-item-custom { min-height: unset; }
         .service-img-top { width: 200px; height: 150px; }
     }
+
+    @media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* üstte minik boşluk bırakmasın diye */
+  }
+}
     </style>
 
 
@@ -133,9 +140,10 @@
 
                         <a href="price.html" class="nav-item nav-link">Klinik</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tedaviler</a>
+                            <a href="service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tedaviler</a>
                             <div class="dropdown-menu m-0">
-                                <a href="services.html" class="dropdown-item">Çene Cerrahisi</a>
+                                <a href="service.html" class="dropdown-item fw-bold text-primary">Tüm Tedaviler</a>
+                                <a href="tedaviler/cene/cene-tedaviler.html" class="dropdown-item">Çene Cerrahisi</a>
                                 <a href="tedaviler/detail2.html" class="dropdown-item">Lazer Tedavisi</a>
                                 <a href="tedaviler/detail3.html" class="dropdown-item">Dental Tomografi</a>
                                 <a href="tedaviler/detail4.html" class="dropdown-item">İmplantoloji</a>
@@ -208,7 +216,7 @@
                     <img src="img/cene-cerrahisi.jpg" alt="Çene Cerrahisi" class="service-img-top mb-4">
                     <h4 class="mb-3">Çene Cerrahisi</h4>
                     <p class="m-0">Çene cerrahisinde; çene kırıkları, gömülü dişler, implant, tümör, kist, eklem hastalıkları, kemik artırımı, apikal rezeksiyon ve protez öncesi cerrahi tedavileri sunulmaktadır.</p>
-                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="tedaviler/cene/cene-tedaviler.html">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -218,7 +226,7 @@
                     <img src="img/blog3.jpg" alt="Lazer Tedavisi" class="service-img-top mb-4">
                     <h4 class="mb-3">Lazer Tedavisi</h4>
                     <p class="m-0">Lazer tedavisiyle ağrı, ödem ve iltihap azalır, doku yenilenmesi, sinir iyileşmesi hızlanır. Güvenli, etkili ve yan etkisiz tedavi sunulur.</p>
-                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="tedaviler/detail2.html">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -228,7 +236,7 @@
                     <img src="img/dental-tomografi.jpg" alt="Dental Tomografi" class="service-img-top mb-4">
                     <h4 class="mb-3">Dental Tomografi</h4>
                     <p class="m-0">Dental tomografi, üç boyutlu görüntüleme ile implant planlama, gömülü dişler, kemik kalitesi, kanal tedavisi ve çene eklemi analizlerinde güvenli, detaylı teşhis sağlar.</p>
-                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="tedaviler/detail3.html">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -238,7 +246,7 @@
                     <img src="img/implantoloji.jpg" alt="İmplantoloji" class="service-img-top mb-4">
                     <h4 class="mb-3">İmplantoloji</h4>
                     <p class="m-0">Eksik dişlerin yerine, doğal diş fonksiyonu ve estetiği sağlayan, güvenli ve dayanıklı implant uygulamaları ile sağlıklı gülüşler elde edilir.</p>
-                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="tedaviler/detail4.html">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -301,6 +309,7 @@
                                 <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="+90 222 220 98 29"><i class="bi bi-telephone me-2"></i></a>
                                 <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="info@yukseldisklinigi.com"><i class="bi bi-envelope me-2"></i></a>
                                 <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-lg btn-primary rounded-pill mt-3" href="hekimler/yavuz.html"
                             </div>
                         </div>
                     </div>
@@ -320,6 +329,7 @@
                                 <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="+90 222 220 98 29"><i class="bi bi-telephone me-2"></i></a>
                                 <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="info@yukseldisklinigi.com"><i class="bi bi-envelope me-2"></i></a>
                                 <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-lg btn-primary rounded-pill mt-3" href="hekimler/funda.html"
                             </div>
                         </div>
                     </div>
@@ -341,7 +351,7 @@
             <div class="row g-5">
                 <div class="col-xl-4 col-lg-6">
                     <div class="bg-light rounded overflow-hidden">
-                        <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/blog1.jpg" alt="">
                         <div class="p-4">
                             <a class="h3 d-block mb-3" href="blog/blog1.html">Çene Eklemi Hastalıkları</a>
                             <p class="m-0">Çene eklemi (Temporomandibular Eklem) hastalıkları nelerdir ve  nasıl teşhis edilir? Hastalıkları oluşum sebepleri nelerdir? Hastalıkları nasıl tedavi edilir?...</p>
@@ -350,7 +360,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6">
                     <div class="bg-light rounded overflow-hidden">
-                        <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/blog2.jpg" alt="">
                         <div class="p-4">
                             <a class="h3 d-block mb-3" href="blog/blog2.html">İplant Uygulamaları Öncesi Dental Tomografi İncelenmesinin Önemi</a>
                             <p class="m-0">İmplant yapılması planlanan hastalarda ağız içi muayene esnasında veya sonrasında istenen radyolojik inceleme yöntemlerinin seçimi önem arz eder. Günümüzde panoromik...</p>
@@ -359,7 +369,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-6">
                     <div class="bg-light rounded overflow-hidden">
-                        <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/blog3.jpg" alt="">
                         <div class="p-4">
                             <a class="h3 d-block mb-3" href="blog/blog3.html">Sinir Hasarının Düşük Akım Lazer ile Tedavisi</a>
                             <p class="m-0">Özellikle implant ve 20 yaş dişi çekimi sonucu oluşan mandibular (alt çene) sinir hasarına bağlı dudak ve dil uyuşukluklarının tedavisinde düşük akım lazer tedavileri uyuşukluk ve ağrının giderilmesinde başarılıdır. Hasarın tipine...</p>
