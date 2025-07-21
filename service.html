@@ -53,7 +53,33 @@
     box-shadow: 0 4px 16px rgba(0,0,0,0.15);
     background: #f4f4f4;
 }
-</style>
+    .service-item-custom {
+        min-height: 410px;
+        justify-content: flex-start;
+    }
+    .service-img-top {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        margin-bottom: 24px;
+        background: #f5f5f5;
+        border: 3px solid #13C5DD;
+    }
+    @media (max-width: 767px) {
+        .service-item-custom { min-height: unset; }
+        .service-img-top { width: 200px; height: 150px; }
+    }
+
+    @media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* üstte minik boşluk bırakmasın diye */
+  }
+}
+    </style>
+
 
 <!-- Ek Styles CSS Navbardaki logo için Son -->
     
@@ -112,11 +138,12 @@
                         <a href="index.html" class="nav-item nav-link active">Anasayfa</a>
                         <a href="about.html" class="nav-item nav-link">Hakkımızda</a>
 
-                        <a href="price.html" class="nav-item nav-link">Klinik</a>
+                        <a href="hekimler/hekimler.html" class="nav-item nav-link">Hekimlerimiz</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tedaviler</a>
+                            <a href="service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tedaviler</a>
                             <div class="dropdown-menu m-0">
-                                <a href="services.html" class="dropdown-item">Çene Cerrahisi</a>
+                                <a href="service.html" class="dropdown-item fw-bold text-primary">Tüm Tedaviler</a>
+                                <a href="tedaviler/cene/cene-tedaviler.html" class="dropdown-item">Çene Cerrahisi</a>
                                 <a href="tedaviler/detail2.html" class="dropdown-item">Lazer Tedavisi</a>
                                 <a href="tedaviler/detail3.html" class="dropdown-item">Dental Tomografi</a>
                                 <a href="tedaviler/detail4.html" class="dropdown-item">İmplantoloji</a>
@@ -124,7 +151,7 @@
                         <!-- <a href="search.html" class="dropdown-item">Search</a> -->
                             </div>
                         </div>
-                        <a href="blog/blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
                         <a href="contact.html" class="nav-item nav-link">İletişim</a>
                     </div>
                 </div>
@@ -133,12 +160,63 @@
     </div>
     <!-- Navbar End -->
 
-    <!-- Services Start -->
+<!-- Services Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+            <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Tedavilerimiz</h5>
+            <h1 class="display-4">Ağız Sağlığı için Sunduğumuz Tedaviler</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item-custom bg-light rounded d-flex flex-column align-items-center text-center p-4 h-100">
+                    <img src="img/cene-cerrahisi.jpg" alt="Çene Cerrahisi" class="service-img-top mb-4">
+                    <h4 class="mb-3">Çene Cerrahisi</h4>
+                    <p class="m-0">Çene cerrahisinde; çene kırıkları, gömülü dişler, implant, tümör, kist, eklem hastalıkları, kemik artırımı, apikal rezeksiyon ve protez öncesi cerrahi tedavileri sunulmaktadır.</p>
+                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="tedaviler/cene/cene-tedaviler.html">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item-custom bg-light rounded d-flex flex-column align-items-center text-center p-4 h-100">
+                    <img src="img/blog3.jpg" alt="Lazer Tedavisi" class="service-img-top mb-4">
+                    <h4 class="mb-3">Lazer Tedavisi</h4>
+                    <p class="m-0">Lazer tedavisiyle ağrı, ödem ve iltihap azalır, doku yenilenmesi, sinir iyileşmesi hızlanır. Güvenli, etkili ve yan etkisiz tedavi sunulur.</p>
+                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="tedaviler/detail2.html">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item-custom bg-light rounded d-flex flex-column align-items-center text-center p-4 h-100">
+                    <img src="img/dental-tomografi.jpg" alt="Dental Tomografi" class="service-img-top mb-4">
+                    <h4 class="mb-3">Dental Tomografi</h4>
+                    <p class="m-0">Dental tomografi, üç boyutlu görüntüleme ile implant planlama, gömülü dişler, kemik kalitesi, kanal tedavisi ve çene eklemi analizlerinde güvenli, detaylı teşhis sağlar.</p>
+                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="tedaviler/detail3.html">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item-custom bg-light rounded d-flex flex-column align-items-center text-center p-4 h-100">
+                    <img src="img/implantoloji.jpg" alt="İmplantoloji" class="service-img-top mb-4">
+                    <h4 class="mb-3">İmplantoloji</h4>
+                    <p class="m-0">Eksik dişlerin yerine, doğal diş fonksiyonu ve estetiği sağlayan, güvenli ve dayanıklı implant uygulamaları ile sağlıklı gülüşler elde edilir.</p>
+                    <a class="btn btn-lg btn-primary rounded-pill mt-3" href="tedaviler/detail4.html">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
     <div class="container-fluid py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Services</h5>
-                <h1 class="display-4">Excellent Medical Services</h1>
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Tedavilerimiz</h5>
+                <h1 class="display-4">Ağız Sağlığı için Uyguladığımız Tedaviler</h1>
             </div>
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
@@ -219,127 +297,6 @@
     <!-- Services End -->
 
 
-    <!-- Appointment Start -->
-    <div class="container-fluid bg-primary my-5 py-5">
-        <div class="container py-5">
-            <div class="row gx-5">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="mb-4">
-                        <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Appointment</h5>
-                        <h1 class="display-4">Make An Appointment For Your Family</h1>
-                    </div>
-                    <p class="text-white mb-5">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
-                    <a class="btn btn-dark rounded-pill py-3 px-5 me-3" href="">Find Doctor</a>
-                    <a class="btn btn-outline-dark rounded-pill py-3 px-5" href="">Read More</a>
-                </div>
-                <div class="col-lg-6">
-                    <div class="bg-white text-center rounded p-5">
-                        <h1 class="mb-4">Book An Appointment</h1>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Choose Department</option>
-                                        <option value="1">Department 1</option>
-                                        <option value="2">Department 2</option>
-                                        <option value="3">Department 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Select Doctor</option>
-                                        <option value="1">Doctor 1</option>
-                                        <option value="2">Doctor 2</option>
-                                        <option value="3">Doctor 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="date" id="date" data-target-input="nearest">
-                                        <input type="text"
-                                            class="form-control bg-light border-0 datetimepicker-input"
-                                            placeholder="Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="time" id="time" data-target-input="nearest">
-                                        <input type="text"
-                                            class="form-control bg-light border-0 datetimepicker-input"
-                                            placeholder="Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Make An Appointment</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Appointment End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Testimonial</h5>
-                <h1 class="display-4">Patients Say About Our Services</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-1.jpg" alt="">
-                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-4 fw-normal">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat. Erat dolor rebum sit ipsum.</p>
-                            <hr class="w-25 mx-auto">
-                            <h3>Patient Name</h3>
-                            <h6 class="fw-normal text-primary mb-3">Profession</h6>
-                        </div>
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-2.jpg" alt="">
-                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-4 fw-normal">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat. Erat dolor rebum sit ipsum.</p>
-                            <hr class="w-25 mx-auto">
-                            <h3>Patient Name</h3>
-                            <h6 class="fw-normal text-primary mb-3">Profession</h6>
-                        </div>
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-3.jpg" alt="">
-                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
-                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-4 fw-normal">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat. Erat dolor rebum sit ipsum.</p>
-                            <hr class="w-25 mx-auto">
-                            <h3>Patient Name</h3>
-                            <h6 class="fw-normal text-primary mb-3">Profession</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
-
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 py-5">
@@ -347,7 +304,7 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Bizimle İletişime Geçin</h4>
-                    <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor</p>
+                    <p class="mb-4"></p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Hoşnudiye Mh. İsmet İnönü 1 Cd. Sakinler Apt. No:31/2 Tepebaşı / Eskişehir</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@yukseldisklinigi.com</p>
                     <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+90 222 220 98 29</p>
@@ -355,33 +312,26 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Hızlı Aramalar</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Anasayfa</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Hakkımızda</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Tedaviler</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Hekimlerimizi Tanıyın</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>En son Blog Yazıları</a>
-                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>İletişim</a>
+                        <a class="text-light mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Anasayfa</a>
+                        <a class="text-light mb-2" href="about.html"><i class="fa fa-angle-right me-2"></i>Hakkımızda</a>
+                        <a class="text-light mb-2" href="service.html"><i class="fa fa-angle-right me-2"></i>Tedaviler</a>
+                        <a class="text-light mb-2" href="hekimler/hekimler.html"><i class="fa fa-angle-right me-2"></i>Hekimlerimizi Tanıyın</a>
+                        <a class="text-light mb-2" href="blog.html"><i class="fa fa-angle-right me-2"></i>En son Blog Yazıları</a>
+                        <a class="text-light" href="contact.html"><i class="fa fa-angle-right me-2"></i>İletişim</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Popüler Linkler</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Anasayfa</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Hakkımızda</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Tedaviler</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Hekimlerimizi Tanıyın</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>En son Blog Yazıları</a>
-                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>İletişim</a>
+                        <a class="text-light mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Anasayfa</a>
+                        <a class="text-light mb-2" href="about.html"><i class="fa fa-angle-right me-2"></i>Hakkımızda</a>
+                        <a class="text-light mb-2" href="service.html"><i class="fa fa-angle-right me-2"></i>Tedaviler</a>
+                        <a class="text-light mb-2" href="hekimler/hekimler.html"><i class="fa fa-angle-right me-2"></i>Hekimlerimizi Tanıyın</a>
+                        <a class="text-light mb-2" href="blog.html"><i class="fa fa-angle-right me-2"></i>En son Blog Yazıları</a>
+                        <a class="text-light" href="contact.html"><i class="fa fa-angle-right me-2"></i>İletişim</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Haber Bülteni</h4>
-                    <form action="">
-                        <div class="input-group">
-                            <input type="text" class="form-control p-3 border-0" placeholder="Your Email Address">
-                            <button class="btn btn-primary">Sign Up</button>
-                        </div>
-                    </form>
                     <h6 class="text-primary text-uppercase mt-4 mb-3">Bizi Takip Edin</h6>
                     <div class="d-flex">
                         <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
@@ -397,12 +347,13 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">Yüksel Diş Kliniği</a>. Tüm Hakları saklıdır.</p>
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="index.html">Yüksel Diş Kliniği</a>. Tüm Hakları saklıdır.</p>
                 </div>
             </div>
         </div>
     </div>
     <!-- Footer End -->
+
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
