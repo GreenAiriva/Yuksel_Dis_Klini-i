@@ -53,7 +53,33 @@
     box-shadow: 0 4px 16px rgba(0,0,0,0.15);
     background: #f4f4f4;
 }
-</style>
+    .service-item-custom {
+        min-height: 410px;
+        justify-content: flex-start;
+    }
+    .service-img-top {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        margin-bottom: 24px;
+        background: #f5f5f5;
+        border: 3px solid #13C5DD;
+    }
+    @media (max-width: 767px) {
+        .service-item-custom { min-height: unset; }
+        .service-img-top { width: 200px; height: 150px; }
+    }
+
+    @media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* üstte minik boşluk bırakmasın diye */
+  }
+}
+    </style>
+
 
 <!-- Ek Styles CSS Navbardaki logo için Son -->
     
@@ -112,11 +138,12 @@
                         <a href="index.html" class="nav-item nav-link active">Anasayfa</a>
                         <a href="about.html" class="nav-item nav-link">Hakkımızda</a>
 
-                        <a href="price.html" class="nav-item nav-link">Klinik</a>
+                        <a href="hekimler/hekimler.html" class="nav-item nav-link">Hekimlerimiz</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tedaviler</a>
+                            <a href="service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tedaviler</a>
                             <div class="dropdown-menu m-0">
-                                <a href="services.html" class="dropdown-item">Çene Cerrahisi</a>
+                                <a href="service.html" class="dropdown-item fw-bold text-primary">Tüm Tedaviler</a>
+                                <a href="tedaviler/cene/cene-tedaviler.html" class="dropdown-item">Çene Cerrahisi</a>
                                 <a href="tedaviler/detail2.html" class="dropdown-item">Lazer Tedavisi</a>
                                 <a href="tedaviler/detail3.html" class="dropdown-item">Dental Tomografi</a>
                                 <a href="tedaviler/detail4.html" class="dropdown-item">İmplantoloji</a>
@@ -124,7 +151,7 @@
                         <!-- <a href="search.html" class="dropdown-item">Search</a> -->
                             </div>
                         </div>
-                        <a href="blog/blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
                         <a href="contact.html" class="nav-item nav-link">İletişim</a>
                     </div>
                 </div>
@@ -132,6 +159,8 @@
         </div>
     </div>
     <!-- Navbar End -->
+
+   
 
     <!-- Contact Start -->
     <div class="container-fluid pt-5">
@@ -212,7 +241,7 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Bizimle İletişime Geçin</h4>
-                    <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor</p>
+                    <p class="mb-4"></p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Hoşnudiye Mh. İsmet İnönü 1 Cd. Sakinler Apt. No:31/2 Tepebaşı / Eskişehir</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@yukseldisklinigi.com</p>
                     <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+90 222 220 98 29</p>
@@ -220,33 +249,26 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Hızlı Aramalar</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Anasayfa</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Hakkımızda</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Tedaviler</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Hekimlerimizi Tanıyın</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>En son Blog Yazıları</a>
-                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>İletişim</a>
+                        <a class="text-light mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Anasayfa</a>
+                        <a class="text-light mb-2" href="about.html"><i class="fa fa-angle-right me-2"></i>Hakkımızda</a>
+                        <a class="text-light mb-2" href="service.html"><i class="fa fa-angle-right me-2"></i>Tedaviler</a>
+                        <a class="text-light mb-2" href="hekimler/hekimler.html"><i class="fa fa-angle-right me-2"></i>Hekimlerimizi Tanıyın</a>
+                        <a class="text-light mb-2" href="blog.html"><i class="fa fa-angle-right me-2"></i>En son Blog Yazıları</a>
+                        <a class="text-light" href="contact.html"><i class="fa fa-angle-right me-2"></i>İletişim</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Popüler Linkler</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Anasayfa</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Hakkımızda</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Tedaviler</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Hekimlerimizi Tanıyın</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>En son Blog Yazıları</a>
-                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>İletişim</a>
+                        <a class="text-light mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Anasayfa</a>
+                        <a class="text-light mb-2" href="about.html"><i class="fa fa-angle-right me-2"></i>Hakkımızda</a>
+                        <a class="text-light mb-2" href="service.html"><i class="fa fa-angle-right me-2"></i>Tedaviler</a>
+                        <a class="text-light mb-2" href="hekimler/hekimler.html"><i class="fa fa-angle-right me-2"></i>Hekimlerimizi Tanıyın</a>
+                        <a class="text-light mb-2" href="blog.html"><i class="fa fa-angle-right me-2"></i>En son Blog Yazıları</a>
+                        <a class="text-light" href="contact.html"><i class="fa fa-angle-right me-2"></i>İletişim</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Haber Bülteni</h4>
-                    <form action="">
-                        <div class="input-group">
-                            <input type="text" class="form-control p-3 border-0" placeholder="Your Email Address">
-                            <button class="btn btn-primary">Sign Up</button>
-                        </div>
-                    </form>
                     <h6 class="text-primary text-uppercase mt-4 mb-3">Bizi Takip Edin</h6>
                     <div class="d-flex">
                         <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
@@ -262,13 +284,12 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">Yüksel Diş Kliniği</a>. Tüm Hakları saklıdır.</p>
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="index.html">Yüksel Diş Kliniği</a>. Tüm Hakları saklıdır.</p>
                 </div>
             </div>
         </div>
     </div>
     <!-- Footer End -->
-
 
 
     <!-- Back to Top -->
