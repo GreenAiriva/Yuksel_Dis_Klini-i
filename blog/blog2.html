@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 
@@ -9,7 +10,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.png" rel="icon">
+    <link href="../img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -53,9 +54,36 @@
     box-shadow: 0 4px 16px rgba(0,0,0,0.15);
     background: #f4f4f4;
 }
-</style>
+    .service-item-custom {
+        min-height: 410px;
+        justify-content: flex-start;
+    }
+    .service-img-top {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        margin-bottom: 24px;
+        background: #f5f5f5;
+        border: 3px solid #13C5DD;
+    }
+    @media (max-width: 767px) {
+        .service-item-custom { min-height: unset; }
+        .service-img-top { width: 200px; height: 150px; }
+    }
+
+    @media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* üstte minik boşluk bırakmasın diye */
+  }
+}
+    </style>
+
 
 <!-- Ek Styles CSS Navbardaki logo için Son -->
+    
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid py-2 border-bottom d-none d-lg-block">
@@ -110,20 +138,26 @@
                     <div class="navbar-nav ms-auto py-0">
                         <a href="../index.html" class="nav-item nav-link active">Anasayfa</a>
                         <a href="../about.html" class="nav-item nav-link">Hakkımızda</a>
-
-                        <a href="../price.html" class="nav-item nav-link">Klinik</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tedaviler</a>
+                            <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Hekimlerimiz</a>
                             <div class="dropdown-menu m-0">
-                                <a href="../blog.html" class="dropdown-item">Çene Cerrahisi</a>
-                                <a href="../detail.html" class="dropdown-item">Lazer Tedavisi</a>
-                                <a href="../team.html" class="dropdown-item">Dental Tomografi</a>
-                                <a href="../testimonial.html" class="dropdown-item">İmplantoloji</a>
-                                <a href="../appointment.html" class="dropdown-item">Dİğer Tedaviler</a>
-                               <!-- <a href="../search.html" class="dropdown-item">Search</a> -->
+                                <a href="../hekimler/yavuz.html" class="dropdown-item fw-bold text-primary">Dr. Dt. Yavuz Yüksel</a>
+                                <a href="../hekimler/yavuz.html" class="dropdown-item">Dr. Dt. Funda Yüksel</a>
                             </div>
                         </div>
-                        <a href="../service.html" class="nav-item nav-link">Blog</a>
+                        <div class="nav-item dropdown">
+                            <a href="../service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tedaviler</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="../service.html" class="dropdown-item fw-bold text-primary">Tüm Tedaviler</a>
+                                <a href="../tedaviler/cene/cene-tedaviler.html" class="dropdown-item">Çene Cerrahisi</a>
+                                <a href="../tedaviler/detail2.html" class="dropdown-item">Lazer Tedavisi</a>
+                                <a href="../tedaviler/detail3.html" class="dropdown-item">Dental Tomografi</a>
+                                <a href="../tedaviler/detail4.html" class="dropdown-item">İmplantoloji</a>
+                    <!--        <a href="../tedaviler/detail5.html" class="dropdown-item">Dİğer Tedaviler</a> -->
+                            </div>
+                        </div>
+                        <a href="../calisma-saatleri.html" class="dropdown-item">Search</a>
+                        <a href="../blog.html" class="nav-item nav-link">Blog</a>
                         <a href="../contact.html" class="nav-item nav-link">İletişim</a>
                     </div>
                 </div>
@@ -272,7 +306,7 @@
                         <a class="text-light mb-2" href="../index.html"><i class="fa fa-angle-right me-2"></i>Anasayfa</a>
                         <a class="text-light mb-2" href="../about.html"><i class="fa fa-angle-right me-2"></i>Hakkımızda</a>
                         <a class="text-light mb-2" href="../blog.html"><i class="fa fa-angle-right me-2"></i>Tedaviler</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Hekimlerimizi Tanıyın</a>
+                        <a class="text-light mb-2" href="../hekimler/hekimler.html"><i class="fa fa-angle-right me-2"></i>Hekimlerimizi Tanıyın</a>
                         <a class="text-light mb-2" href="../services.html"><i class="fa fa-angle-right me-2"></i>En son Blog Yazıları</a>
                         <a class="text-light" href="../contact.html"><i class="fa fa-angle-right me-2"></i>İletişim</a>
                     </div>
