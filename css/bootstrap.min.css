@@ -1873,7 +1873,7 @@ textarea.form-control.is-invalid {
 
 .btn {
   display: inline-block;
-  font-weight: 400;
+  font-weight: 690;  /*Burayı Yaptık #1*/
   line-height: 1.5;
   color: #848E9F;
   text-align: center;
@@ -1885,20 +1885,22 @@ textarea.form-control.is-invalid {
   padding: .375rem .75rem;
   font-size: 1rem;
   border-radius: 8px;
-  transition:
-    color 0.15s ease-in-out,
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  transition:             /*Burayı Yaptık #2*/
+    color 0.25s ease-in-out,
+    background-color 0.25s ease-in-out,
+    border-color 0.25s ease-in-out,
+    box-shadow 0.25s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .btn { transition: none; }
+.btn:hover { /*Burayı Yaptık #3*/
+  color: #13C5DD;
+  box-shadow: 0 6px 18px -4px rgba(19,197,221,0.18), 0 1.5px 4px 0 rgba(53,79,142,0.14);
 }
-.btn:hover { color: #848E9F; }
 .btn-check:focus + .btn,
 .btn:focus {
   outline: 0;
-  box-shadow: 0 0 0 .25rem rgba(19, 197, 221, 0.25);
+  box-shadow: 0 0 0 .25rem rgba(19, 197, 221, 0.25); /*Burayı Yaptık #3 son*/
 }
 .btn:disabled,
 .btn.disabled,
@@ -1910,7 +1912,7 @@ fieldset:disabled .btn {
 /* ======= Color Variants ======= */
 /* PRIMARY */
 .btn-primary {
-  color: #000;
+  color: #F8F8F8;
   background-color: #13C5DD;
   border-color: #13C5DD;
 }
@@ -2236,6 +2238,31 @@ fieldset:disabled .btn {
   border-color: #1D2A4D;
 }
 
+/* ==Button Kare==*/
+.btn-kare {        /* .btn-square → .btn-kare */
+    width: 36px;   /* .btn-square → .btn-kare */
+    height: 36px;  /* .btn-square → .btn-kare */
+}
+
+.btn-sm-kare {     /* .btn-sm-square → .btn-sm-kare */
+    width: 28px;   /* .btn-sm-square → .btn-sm-kare */
+    height: 28px;  /* .btn-sm-square → .btn-sm-kare */
+}
+
+.btn-lg-kare {     /* .btn-lg-square → .btn-lg-kare */
+    width: 46px;   /* .btn-lg-square → .btn-lg-kare */
+    height: 46px;  /* .btn-lg-square → .btn-lg-kare */
+}
+
+.btn-kare,         /* .btn-square → .btn-kare */
+.btn-sm-kare,      /* .btn-sm-square → .btn-sm-kare */
+.btn-lg-kare {     /* .btn-lg-square → .btn-lg-kare */
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+/*==Button Kare Ek Sonu==*/
+  
 /* ======= Outline Variants ======= */
 /* OUTLINE PRIMARY */
 .btn-outline-primary {
@@ -3341,6 +3368,51 @@ fieldset:disabled .btn {
     display: none;
   }
 }
+  /* == Yeni Navbar Classları ==*/
+
+  .acik-navbar .menu .menu-link { /* .navbar-light .navbar-nav .nav-link -> .acik-navbar .menu .menu-link */
+    font-family: 'Jost', sans-serif;           /* aynı */
+    position: relative;                        /* aynı */
+    margin-left: 32px;                         /* margin-left: 30px -> 32px */
+    padding: 28px 0;                           /* padding: 30px 0 -> 28px 0 */
+    font-size: 17.5px;                         /* font-size: 18px -> 17.5px */
+    font-weight: 650;                          /* font-weight: 700 -> 650 */
+    color: #192441;                            /* color: var(--dark) -> #192441 */
+    outline: none;                             /* aynı */
+    transition: color 0.5s, background 0.4s, margin 0.3s; /* transition: .5s -> property bazında */
+    letter-spacing: 0.04em;                    /* yeni eklendi */
+}
+.acik-navbar .menu .menu-link:hover,
+.acik-navbar .menu .menu-link.aktif {  /* .navbar-light .navbar-nav .nav-link:hover, .active -> .acik-navbar .menu .menu-link:hover, .aktif */
+    color: #13C5DD;                            /* color: var(--primary) -> #13C5DD */
+    background: #f7fcfd;                       /* yeni eklendi */
+}
+
+@media (min-width: 992px) {
+    .acik-navbar .menu .menu-link::before {    /* ... -> .acik-navbar .menu .menu-link::before */
+        position: absolute;                        /* aynı */
+        content: "";                              /* aynı */
+        width: 0;                                 /* aynı */
+        height: 5px;                              /* height: 5px -> 3px */
+        bottom: 0px;                              /* bottom: 0 -> 2px */
+        left: 50%;                                /* aynı */
+        background: #13C5DD;                      /* background: var(--primary) -> #13C5DD */
+        transition: 0.51s;                          /* transition: .5s -> property bazında */
+    }
+    .acik-navbar .menu .menu-link:hover::before,
+    .acik-navbar .menu .menu-link.aktif::before { /* ... -> .acik-navbar .menu .menu-link:hover::before, .aktif::before */
+        width: 100%;                              /* aynı */
+        left: 0;                                  /* aynı */
+    }
+}
+
+@media (max-width: 991.98px) {
+    .acik-navbar .menu .menu-link  { /* ... -> .acik-navbar .menu .menu-link */
+        margin-left: 0;                          /* aynı */
+        padding: 10px 4px;                       /* padding: 10px 0 -> 10px 4px */
+    }
+}
+/*== Yeni Navbar Classları Sonu==*/
 @media (min-width: 576px) {
   .card-group {
     display: flex;
@@ -7676,3 +7748,23 @@ visibility: hidden !important;
   .d-print-inline-flex { display: inline-flex !important; }
   .d-print-none { display: none !important; }
 }
+/* ==Üste Çık== */
+
+  .uste-cik {                    /* .back-to-top -> .uste-cik */
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+    z-index: 99;
+}
+  
+/*==Üste Çık Ek Sonu==*/
+
+/*HERO Başlangıç*/
+.hero-header {
+    background: url(../img/hero.jpg) top right no-repeat;
+    background-size: cover;
+    opacity: 60%;
+}
+/*== HERO Son==*/
