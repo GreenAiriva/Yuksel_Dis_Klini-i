@@ -31,6 +31,12 @@
 </head>
 <!-- Ek Styles CSS Navbardaki logo için -->
 <style>
+.topbar-contact a,
+.topbar-contact span {
+  font-size: 14px;           /* İstediğiniz punto değerini girin */
+  font-family: 'Open Sans', sans-serif; /* İstediğiniz font ailesi */
+}
+
 /* Navbar logosu için özel stil */
 .logo {
     display: inline-flex;
@@ -88,16 +94,21 @@
     <div class="container-fluid py-2 border-bottom d-none d-lg-block">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-decoration-none text-body pe-3" href=""><i class="bi bi-telephone me-2"></i>+90 222 220 98 29</a>
-                        <span class="text-body">|</span>
-                        <a class="text-decoration-none text-body px-3" href=""><i class="bi bi-envelope me-2"></i>info@yukseldisklinigi.com</a>
-                        <span class="text-body">|</span>
-                        <a class="text-decoration-none text-body px-3" href=""><i class="bi bi-envelope me-2"></i>Hoşnudiye Mh. İsmet İnönü 1 Cd. Sakinler Apt. No:31/2 Tepebaşı / Eskişehir</a>
-                        
-                    </div>
-                </div>
+<div class="topbar-contact">
+  <a class="text-decoration-none text-body pe-3" href="">
+    <i class="bi bi-telephone me-2"></i>+90 222 220 98 29
+  </a>
+  <span class="text-body">|</span>
+  <a class="text-decoration-none text-body px-3" href="">
+    <i class="bi bi-envelope me-2"></i>info@yukseldisklinigi.com
+  </a>
+  <span class="text-body">|</span>
+  <a class="text-decoration-none text-body px-3" href="">
+    <i class="bi bi-envelope me-2"></i>
+    Hoşnudiye Mh. İsmet İnönü 1 Cd. Sakinler Apt. No:31/2 Tepebaşı / Eskişehir
+  </a>
+</div>
+
                 <div class="col-md-6 text-center text-lg-end">
                     <div class="d-inline-flex align-items-center">
                         <a class="text-body px-2" href="">
@@ -459,3 +470,4 @@
 </body>
 
 </html>
+
